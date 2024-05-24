@@ -1,6 +1,6 @@
 # For Hire Vehicles in NYC
 
-This is a full-stack application built using the MEAN stack and Vite for the frontend. The application displays information about For Hire Vehicles (FHV) in New York City using the Open Data API.
+This is a full-stack application built using the MERN stack and Vite for the frontend. The application displays information about For Hire Vehicles (FHV) in New York City using the Open Data API.
 
 ## Features
 
@@ -13,4 +13,4 @@ This is a full-stack application built using the MEAN stack and Vite for the fro
 
 - Frontend: React, Vite, Tailwind CSS
 - Backend: Node.js, Express.js, MongoDB, Mongoose
-- State Management: useState, useEffect (no Redux)
+- State Management: useState, useEffect
