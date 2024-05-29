@@ -8,6 +8,7 @@ import Reviews from './components/Reviews';
 import Profile from './components/Profile';
 import { UserProvider } from './context/UserContext';
 import DriverDetails from './components/DriverDetails';
+import Drivers from './components/Drivers';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/reviews" element={<Reviews />} />
+          <Route path="/drivers" element={<Drivers />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />

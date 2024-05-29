@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaCar, FaIdBadge, FaCalendarAlt, FaPhoneAlt, FaMapMarkerAlt, FaCheckCircle, FaTimesCircle, FaCopy } from 'react-icons/fa';
+import { FaCopy } from 'react-icons/fa';
+import { SlActionRedo } from "react-icons/sl";
 
 const VehicleCard = ({ vehicle }) => {
   const { active, vehicle_license_number, name, expiration_date, dmv_license_plate_number, vehicle_year, base_name, base_telephone_number, base_address } = vehicle;
@@ -18,14 +19,16 @@ const VehicleCard = ({ vehicle }) => {
 
   return (
     <>
-    <div className="bg-white max-w-2xl shadow overflow-hidden sm:rounded-lg">
+    <div className="bg-white max-w-2xl shadow overflow-hidden sm:rounded-lg border-shadow">
     <div className="px-4 py-5 sm:px-6">
         <h3 className="text-lg leading-6 font-medium text-gray-900">
-          <Link to={`/drivers/${vehicle_license_number}`} className="text-yellow-500 hover:underline">
+          <Link to={`/drivers/${vehicle_license_number}`} className="text-black hover:underline">
             {name}
+            <SlActionRedo className="ml-2 float-right text-gray-500" />
           </Link>
+          
         </h3>
-        <p className="mt-1 max-w-2xl text-sm text-gray-500">
+        <p className="mt-1 max-w-2xl text-sm text-amber-500">
           {base_name}
         </p>
     </div>

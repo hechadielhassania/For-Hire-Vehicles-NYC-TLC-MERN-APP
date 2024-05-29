@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <header className="shadow-lg px-3 py-0">
-      <nav className="bg-white border-gray-200 px-4 lg:px-6 py-1">
+      <nav className="bg-gray-100/50 border-gray-200 px-4 lg:px-6 py-1">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <Link to="/" className="flex items-center">
             <img src={logo} className="mr-3" alt="Logo" />
@@ -56,15 +56,23 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-400 lg:p-0 dark:text-gray-400"
+                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-500 lg:p-0 dark:text-gray-400"
                 >
                   Home
                 </Link>
               </li>
               <li>
                 <Link
+                  to="/drivers"
+                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-500 lg:p-0 dark:text-gray-400"
+                >
+                  Drivers
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/reviews"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-400 lg:p-0 dark:text-gray-400"
+                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-500 lg:p-0 dark:text-gray-400"
                 >
                   Reviews
                 </Link>
@@ -74,7 +82,7 @@ const Navbar = () => {
                   <li>
                     <Link
                       to="/profile"
-                      className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-400 lg:p-0 dark:text-gray-400"
+                      className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-500 lg:p-0 dark:text-gray-400"
                     >
                       {user.name}
                     </Link>
@@ -82,7 +90,7 @@ const Navbar = () => {
                   <li>
                     <button
                       onClick={logout}
-                      className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-400 lg:p-0 dark:text-gray-400"
+                      className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-500 lg:p-0 dark:text-gray-400"
                     >
                       Logout
                     </button>

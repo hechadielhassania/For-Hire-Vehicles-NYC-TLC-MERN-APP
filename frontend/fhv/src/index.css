@@ -2,3 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    background-image: url(../src/assets/bg.avif);
+  background-color: rgba(255, 255, 255, 0.9);
+  background-blend-mode: overlay;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.maincolor{
+    color: #F3C500;
+}
+.mainbgcolor{
+    background-color: #F3C500;
+}
+.border-shadow{box-shadow: 0px 3.35px 13.42px 0px rgba(0, 0, 0, 0.0784313725490196);
+}
