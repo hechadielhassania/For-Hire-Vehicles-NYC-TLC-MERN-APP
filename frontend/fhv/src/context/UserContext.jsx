@@ -1,25 +1,28 @@
-import React, { createContext, useState, useContext } from 'react';
+// src/context/UserContext.js
 
-const UserContext = createContext();
+import React, { createContext, useState, useEffect } from 'react';
+import axios from 'axios';
 
-export const useUser = () => {
-  return useContext(UserContext);
-};
+export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  const login = (userData) => {
-    setUser(userData);
-  };
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const response = await axios.get('/auth/user');
+        setUser(response.data);
+      } catch (error) {
+        console.error('Error fetching user:', error);
+      }
+    };
 
-  const logout = () => {
-    setUser(null);
-    localStorage.removeItem('token');
-  };
+    fetchUser();
+  }, []);
 
   return (
-    <UserContext.Provider value={{ user, login, logout }}>
+    <UserContext.Provider value={{ user, setUser }}>
       {children}
     </UserContext.Provider>
   );

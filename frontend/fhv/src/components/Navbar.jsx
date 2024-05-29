@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useUser } from '../context/UserContext';
+// import { useUser } from '../context/UserContext';
 import logo from '../assets/logo.png';
 
 const Navbar = () => {
-  const { user, logout } = useUser();
+  // const { user, logout } = useUser();
 
   return (
     <header className="shadow-lg px-3 py-0">
@@ -17,7 +17,7 @@ const Navbar = () => {
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
-              className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400"
+              className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200  "
               aria-controls="mobile-menu-2"
               aria-expanded="false"
             >
@@ -56,7 +56,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-500 lg:p-0 dark:text-gray-400"
+                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-500 lg:p-0  "
                 >
                   Home
                 </Link>
@@ -64,7 +64,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/drivers"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-500 lg:p-0 dark:text-gray-400"
+                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-500 lg:p-0  "
                 >
                   Drivers
                 </Link>
@@ -72,17 +72,25 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/reviews"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-500 lg:p-0 dark:text-gray-400"
+                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-500 lg:p-0  "
                 >
                   Reviews
                 </Link>
               </li>
-              {user ? (
+              <li>
+                <Link
+                  to="/login"
+                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-500 lg:p-0  "
+                >
+                  Login
+                </Link>
+              </li>
+              {/* {user ? (
                 <>
                   <li>
                     <Link
                       to="/profile"
-                      className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-500 lg:p-0 dark:text-gray-400"
+                      className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-500 lg:p-0  "
                     >
                       {user.name}
                     </Link>
@@ -90,7 +98,7 @@ const Navbar = () => {
                   <li>
                     <button
                       onClick={logout}
-                      className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-500 lg:p-0 dark:text-gray-400"
+                      className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-500 lg:p-0  "
                     >
                       Logout
                     </button>
@@ -100,12 +108,12 @@ const Navbar = () => {
                 <li>
                   <Link
                     to="/login"
-                    className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-400 lg:p-0 dark:text-gray-400"
+                    className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-400 lg:p-0  "
                   >
                     Login
                   </Link>
                 </li>
-              )}
+              )} */}
             </ul>
           </div>
         </div>

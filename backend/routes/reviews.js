@@ -1,15 +1,18 @@
 
 const express = require('express');
 const router = express.Router();
-const Review = require('../models/Review'); 
+const Review = require('../models/Review');
 
-// Create a review
+// Create a new review
 router.post('/', async (req, res) => {
   try {
-    const review = await Review.create(req.body);
+    const { user, driver, rating, comment } = req.body;
+    const review = new Review({ user, driver, rating, comment });
+    await review.save();
     res.status(201).json(review);
-  } catch (err) {
-    res.status(400).json({ message: err.message });
+  } catch (error) {
+    console.error('Error creating review:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
@@ -18,31 +21,23 @@ router.get('/', async (req, res) => {
   try {
     const reviews = await Review.find();
     res.json(reviews);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
+  } catch (error) {
+    console.error('Error fetching reviews:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
-// Update a review
-router.patch('/:id', async (req, res) => {
+// Get reviews by driver ID
+router.get('/driver/:driverId', async (req, res) => {
   try {
-    const { id } = req.params;
-    const updatedReview = await Review.findByIdAndUpdate(id, req.body, { new: true });
-    res.json(updatedReview);
-  } catch (err) {
-    res.status(400).json({ message: err.message });
+    const reviews = await Review.find({ driver: req.params.driverId });
+    res.json(reviews);
+  } catch (error) {
+    console.error('Error fetching reviews:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
-// Delete a review
-router.delete('/:id', async (req, res) => {
-  try {
-    const { id } = req.params;
-    await Review.findByIdAndDelete(id);
-    res.json({ message: 'Review deleted successfully' });
-  } catch (err) {
-    res.status(400).json({ message: err.message });
-  }
-});
+// Other routes for updating and deleting reviews can be added similarly
 
 module.exports = router;

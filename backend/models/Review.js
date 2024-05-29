@@ -1,9 +1,10 @@
 
+
 const mongoose = require('mongoose');
 
 const reviewSchema = new mongoose.Schema({
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, 
-  driver: { type: mongoose.Schema.Types.ObjectId, ref: 'Driver', required: true }, 
+  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, // Assuming you have a User model
+  driver: { type: mongoose.Schema.Types.ObjectId, ref: 'Driver', required: true }, // Assuming you have a Driver model
   rating: { type: Number, required: true },
   comment: String,
   createdAt: { type: Date, default: Date.now },

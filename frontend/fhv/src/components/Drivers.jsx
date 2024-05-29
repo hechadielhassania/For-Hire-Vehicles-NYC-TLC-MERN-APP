@@ -14,7 +14,7 @@ const Drivers = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5550/vehicles');
+        const response = await fetch('https://data.cityofnewyork.us/resource/8wbx-tsch.json');
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }

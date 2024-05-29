@@ -17,12 +17,12 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/reviews" element={<Reviews />} /> {/* Ensure the path matches the driver ID parameter */}
           <Route path="/drivers" element={<Drivers />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/drivers/:id" element={<DriverDetails />} /> 
+          <Route path="/drivers/:id" element={<DriverDetails />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
