@@ -1,6 +1,7 @@
 # 🚖 Hire Vehicles NYC TLC
-A Full Stack MERN Application With CRUD
-Enhancing NYC's Taxi Service through User Reviews and Data Transparency 🗽
+  - A Full Stack MERN Application With CRUD
+  - Enhancing NYC's Taxi Service through User Reviews and Data Transparency 🗽
+
 ![Alt text](preview.png?raw=true "Title")
 ## Overview
 The Hire Vehicle Application is a web platform designed to facilitate the management of vehicle hiring services. It allows users to browse available vehicles, view their details, and leave reviews for drivers. The application provides a seamless experience for both customers and service providers in the vehicle hiring industry.
