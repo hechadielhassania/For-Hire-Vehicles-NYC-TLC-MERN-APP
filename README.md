@@ -7,7 +7,7 @@
 
 | Screen capture                                           |
 | -------------------------------------------------------- |
-| ![App Demo](https://via.placeholder.com/800x400.png?text=Demo+Coming+Soon) |
+| ![App Demo](assets/preview.gif) |
 
 ## 📋 Table of Contents
 
@@ -17,11 +17,7 @@
 - [Features](#features)
 - [Technology](#technology)
 - [APIs](#apis)
-- [Figma Design File](#figma-design-file)
-- [Gantt Chart](#gantt-chart)
-- [Entity Relationship Diagram (ERD)](#entity-relationship-diagram-erd)
 - [Takeaway](#takeaway)
-- [Reflection](#reflection)
 - [What's next?](#whats-next)
 
 ## 📖 Overview
@@ -53,23 +49,6 @@ Our application collects and displays user reviews for NYC taxi drivers. By inte
 
 - **NYC Hire Vehicles API**: [NYC Open Data](https://data.cityofnewyork.us/resource/8wbx-tsch.json)
 
-## 🎨 Figma Design File
-
-| [Click here to review the Figma design file](https://www.figma.com/proto/IjceSS9JCBiT4Cjb99g9oh/Per-Scholar-Mock-Up) |
-| ------------------------------------------------------------------------------- |
-| ![Figma Design](https://via.placeholder.com/800x400.png?text=Figma+Design+Preview) |
-
-## 📅 Gantt Chart
-
-| Snapshot                                              |
-| ----------------------------------------------------- |
-| ![Gantt Chart](sandbox:/mnt/data/gantt_chart_updated.png) |
-
-## 🔗 Entity Relationship Diagram (ERD)
-
-| Diagram                                                |
-| ----------------------------------------------------- |
-| ![ERD Diagram](sandbox:/mnt/data/erd_diagram_table.png) |
 
 ## 📝 Takeaway
 
@@ -77,11 +56,50 @@ Our application collects and displays user reviews for NYC taxi drivers. By inte
 - **Data Transparency**: Demonstrates how open data can be leveraged to provide transparency and improve public services.
 - **MERN Stack Proficiency**: Provides hands-on experience with the MERN stack, enhancing full-stack development skills.
 
-## 🔍 Reflection
+## 📋 What's next?
 
-| Insights & Learning Points        | Details                                                                                                                                                                                                                                                                   |
-| ----------------------------------| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Comprehensive Data Handling**   | Establishing a robust schema for driver and review data was crucial for the app’s scalability and performance.                                                                                                                                                            |
-| **Iterative Development**         | Iterative approach with continuous testing helped in maintaining code quality and functionality throughout the development cycle.                                                                                                                                          |
-| **User-Centric Design**           | Focusing on user experience, the design was iterated based on feedback to ensure ease of use and accessibility.                                                                                                                                                            |
-| **Consistent Progress**
+To further enhance the Hire Vehicle Application, the following features and improvements can be added:
+
+### 1. Image Upload for Reviews
+- Allow users to upload images along with their reviews to provide visual feedback about the vehicle or driver.
+- Integrate a file storage service (e.g., AWS S3, Cloudinary) to handle image uploads and storage.
+
+### 2. Driver Profiles
+- Create detailed driver profiles that include driver ratings, reviews, and a brief biography.
+- Allow drivers to update their profiles with personal information and achievements.
+
+### 3. Advanced Search and Filtering
+- Implement advanced search and filtering options for users to easily find vehicles based on various criteria such as price, type, availability, and location.
+- Add sorting options for search results (e.g., by rating, price, or distance).
+
+### 4. Booking and Reservation System
+- Develop a booking and reservation system that allows users to book vehicles directly through the application.
+- Integrate payment gateways (e.g., Stripe, PayPal) for secure online payments.
+
+### 5. Notification System
+- Implement a notification system to keep users informed about their bookings, reviews, and other important updates.
+- Use email and push notifications to enhance user engagement.
+
+### 6. Review Moderation
+- Add a review moderation system to ensure the quality and relevance of reviews.
+- Allow administrators to approve or reject reviews before they are published.
+
+### 7. User Authentication and Profiles
+- Implement user authentication to provide personalized experiences and secure access to user-specific features.
+- Allow users to manage their profiles, view their review history, and update their account settings.
+
+### 8. Multi-language Support
+- Provide multi-language support to cater to a diverse user base.
+- Implement language selection options and translate the application content into multiple languages.
+
+### 9. Real-time Chat Support
+- Integrate a real-time chat support feature to assist users with their queries and issues.
+- Use chat platforms like Intercom or custom WebSocket-based solutions.
+
+### 10. Enhanced Analytics
+- Add analytics and reporting features to provide insights into user behavior, vehicle demand, and review trends.
+- Use analytics tools like Google Analytics, Mixpanel, or custom dashboards.
+
+By implementing these features, the Hire Vehicle Application can provide a more comprehensive and user-friendly experience for both customers and service providers in the vehicle hiring industry.
+
+
