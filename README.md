@@ -56,6 +56,15 @@ Our application collects and displays user reviews for NYC taxi drivers. By inte
 | ![Gantt Chart](assets/grant.png) |
 
 
+## 🎨 Design Process
+
+| [Design Process, Planning]() |
+| ------------------------------------------------------------------------------- |
+| ![SiteMap](assets/figma_sitemap.png) |
+| ![Planning](assets/planning.png) |
+
+
+
 ## 📝 Takeaway
 
 - **User Feedback**: The project underlines the importance of user feedback in improving service quality.
