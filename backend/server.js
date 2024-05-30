@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
-const Review = require('./models/Review');
+const reviewRoutes = require('./routes/reviews');
 
 dotenv.config();
 
@@ -19,7 +19,8 @@ mongoose.connect(process.env.MONGODB_URI, {
 app.use(express.json());
 app.use(cors());
 
-
+// Prefix all routes with /api
+app.use('/api', reviewRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

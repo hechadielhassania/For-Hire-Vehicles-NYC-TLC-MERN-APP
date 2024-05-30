@@ -4,11 +4,12 @@ import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Register from './components/Register';
 import Home from './components/Home';
-import Reviews from './components/Reviews';
+import Reviews from './components/ReviewList.jsx';
 import Profile from './components/Profile';
 import { UserProvider } from './context/UserContext';
 import DriverDetails from './components/DriverDetails';
 import Drivers from './components/Drivers';
+import ReviewsPage from './components/ReviewsPage.jsx';
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/reviews" element={<Reviews />} /> {/* Ensure the path matches the driver ID parameter */}
+          <Route path="/reviews" element={<ReviewsPage />} /> {/* Ensure the path matches the driver ID parameter */}
           <Route path="/drivers" element={<Drivers />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
