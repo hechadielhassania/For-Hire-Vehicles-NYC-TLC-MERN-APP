@@ -1,58 +1,87 @@
-# 🚖 Hire Vehicles NYC TLC
-  - A Full Stack MERN Application With CRUD
-  - Enhancing NYC's Taxi Service through User Reviews and Data Transparency 🗽
+# 🚕 Hire Vehicles NYC TLC
 
-![Alt text](preview.png?raw=true "Title")
-## Overview
-The Hire Vehicle Application is a web platform designed to facilitate the management of vehicle hiring services. It allows users to browse available vehicles, view their details, and leave reviews for drivers. The application provides a seamless experience for both customers and service providers in the vehicle hiring industry.
+> - A Full Stack MERN Application With CRUD
+> - Enhancing NYC's Taxi Service through User Reviews and Data Transparency 🗽
 
-## Problem
-The vehicle hiring industry often lacks efficient and user-friendly platforms for managing vehicle rentals and gathering feedback from customers. Traditional methods of booking vehicles and leaving reviews can be time-consuming. There is a need for a modern web application that streamlines the process of hiring vehicles and collecting reviews from customers.
+## 🌟 Live Demo
 
-## Solution
-The Hire Vehicle Application addresses the problem by offering a comprehensive solution for managing vehicle rentals and reviews. It provides an intuitive user interface for browsing vehicles, viewing their specifications, and selecting preferred options. Users can easily book vehicles, track their reservations, and leave reviews for drivers. The application ensures a smooth experience for both customers and service providers, enhancing satisfaction and efficiency in the vehicle hiring process.
+| Screen capture                                           |
+| -------------------------------------------------------- |
+| ![App Demo](https://via.placeholder.com/800x400.png?text=Demo+Coming+Soon) |
 
-## Features
-- Browse available vehicles
-- View vehicle details, including specifications and availability
-- Search for vehicles by category, location, or other criteria
-- Book vehicles for specific dates and times
-- View and manage reservation details
-- Leave reviews and ratings for drivers
-- Edit or delete reviews
-- Responsive design for optimal viewing on various devices
+## 📋 Table of Contents
 
-## Technology
-### Backend
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- RESTful API
-- CORS middleware
-- dotenv for environment variable management
+- [Overview](#overview)
+- [Problem](#problem)
+- [Solution](#solution)
+- [Features](#features)
+- [Technology](#technology)
+- [APIs](#apis)
+- [Figma Design File](#figma-design-file)
+- [Gantt Chart](#gantt-chart)
+- [Entity Relationship Diagram (ERD)](#entity-relationship-diagram-erd)
+- [Takeaway](#takeaway)
+- [Reflection](#reflection)
+- [What's next?](#whats-next)
 
-### Frontend
-- React.js
-- Tailwind CSS for styling
-- React Router for navigation
-- Axios for making HTTP requests
-- Context API for state management
+## 📖 Overview
 
-## APIs Used
-- Custom backend API (described in the backend README)
+Hire Vehicles NYC TLC aims to improve the taxi service in New York City by leveraging user reviews and data transparency. This project provides an interface for users to review drivers, helping to highlight top performers and areas needing improvement.
 
-## Setup Instructions
-1. Clone the repository from [https://github.com/hechadielhassania/fhv-app/]
-2. Navigate to the backend directory and install dependencies using `npm install`
-3. Create a `.env` file and set environment variables (e.g., MongoDB connection URI, port number)
-4. Run the backend server using `npm start`
-5. Navigate to the frontend directory and install dependencies using `npm install`
-6. Run the frontend application using `npm start`
-7. Access the application in your web browser at the specified port (e.g., `http://localhost:3000`)
+## 🛑 Problem
 
-## Contributors
-- El Hassania Hechadi
+Despite NYC's extensive taxi network, there is a lack of transparent, user-generated feedback on driver performance. This gap makes it difficult for passengers to make informed choices and for service providers to improve.
 
+## 💡 Solution
 
+Our application collects and displays user reviews for NYC taxi drivers. By integrating with the NYC data API for hire vehicles, we provide a comprehensive platform for feedback, aiming to enhance the overall quality of the taxi service.
 
+## 🌟 Features
+
+1. **Rate and Review Drivers**: Users can rate and review drivers, providing feedback on their experiences.
+2. **Driver Profiles**: Detailed profiles for each driver, including license information and review summaries.
+3. **Top Drivers**: Highlighting the best drivers based on user reviews.
+4. **Admin Panel**: Manage drivers, reviews, and user accounts.
+
+## 🚀 Technology
+
+- **Frontend**: React, Tailwind CSS, Axios
+- **Backend**: Node.js, Express.js, MongoDB, RESTful API
+- **Tools**: Vite, Postman, Git, GitHub
+
+## 🌐 APIs
+
+- **NYC Hire Vehicles API**: [NYC Open Data](https://data.cityofnewyork.us/resource/8wbx-tsch.json)
+
+## 🎨 Figma Design File
+
+| [Click here to review the Figma design file](https://www.figma.com/proto/IjceSS9JCBiT4Cjb99g9oh/Per-Scholar-Mock-Up) |
+| ------------------------------------------------------------------------------- |
+| ![Figma Design](https://via.placeholder.com/800x400.png?text=Figma+Design+Preview) |
+
+## 📅 Gantt Chart
+
+| Snapshot                                              |
+| ----------------------------------------------------- |
+| ![Gantt Chart](sandbox:/mnt/data/gantt_chart_updated.png) |
+
+## 🔗 Entity Relationship Diagram (ERD)
+
+| Diagram                                                |
+| ----------------------------------------------------- |
+| ![ERD Diagram](sandbox:/mnt/data/erd_diagram_table.png) |
+
+## 📝 Takeaway
+
+- **User Feedback**: The project underlines the importance of user feedback in improving service quality.
+- **Data Transparency**: Demonstrates how open data can be leveraged to provide transparency and improve public services.
+- **MERN Stack Proficiency**: Provides hands-on experience with the MERN stack, enhancing full-stack development skills.
+
+## 🔍 Reflection
+
+| Insights & Learning Points        | Details                                                                                                                                                                                                                                                                   |
+| ----------------------------------| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Comprehensive Data Handling**   | Establishing a robust schema for driver and review data was crucial for the app’s scalability and performance.                                                                                                                                                            |
+| **Iterative Development**         | Iterative approach with continuous testing helped in maintaining code quality and functionality throughout the development cycle.                                                                                                                                          |
+| **User-Centric Design**           | Focusing on user experience, the design was iterated based on feedback to ensure ease of use and accessibility.                                                                                                                                                            |
+| **Consistent Progress**
