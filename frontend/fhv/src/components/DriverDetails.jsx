@@ -9,6 +9,7 @@ const DriverDetails = () => {
     const [copiedField, setCopiedField] = useState(null);
     const { id } = useParams();
     const [driver, setDriver] = useState(null);
+    const [reviews, setReviews] = useState([]);
 
     const copyToClipboard = (content) => {
         navigator.clipboard.writeText(content);
@@ -18,25 +19,36 @@ const DriverDetails = () => {
         }, 2000);
     };
 
-    useEffect(() => {
-        const fetchDriverDetails = async () => {
-            try {
-                const response = await fetch(`https://data.cityofnewyork.us/resource/8wbx-tsch.json?vehicle_license_number=${id}`);
-                if (!response.ok) {
-                    throw new Error('Failed to fetch driver details');
-                }
-                const data = await response.json();
-                if (data.length > 0) {
-                    setDriver(data[0]);
-                } else {
-                    throw new Error('Driver not found');
-                }
-            } catch (error) {
-                console.error('Error fetching driver details:', error);
+    const fetchDriverDetails = async () => {
+        try {
+            const response = await fetch(`https://data.cityofnewyork.us/resource/8wbx-tsch.json?vehicle_license_number=${id}`);
+            if (!response.ok) {
+                throw new Error('Failed to fetch driver details');
             }
-        };
+            const data = await response.json();
+            if (data.length > 0) {
+                setDriver(data[0]);
+            } else {
+                throw new Error('Driver not found');
+            }
+        } catch (error) {
+            console.error('Error fetching driver details:', error);
+        }
+    };
 
+    const fetchDriverReviews = async () => {
+        try {
+            const response = await fetch(`http://localhost:3000/api/reviews/${id}`);
+            const reviewsData = await response.json();
+            setReviews(reviewsData);
+        } catch (error) {
+            console.error('Error fetching driver reviews:', error);
+        }
+    };
+
+    useEffect(() => {
         fetchDriverDetails();
+        fetchDriverReviews();
     }, [id]);
 
     if (!driver) {
@@ -224,14 +236,8 @@ const DriverDetails = () => {
                         </div>
                         {/* Reviews sections */}
                         <div className='py-10'>
-                          <div className="px-4 py-5 sm:px-6">
-                              <h1 className="text-xl leading-6 font-medium text-gray-900">
-                              Driver Reviews :
-                              </h1>
-                          </div>
-                            <ReviewList vehicleLicenseNumber={driver.dmv_license_plate_number} />
-                            <AddReview vehicleLicenseNumber={driver.dmv_license_plate_number} />
-                            
+                            {/* <ReviewList vehicleLicenseNumber={driver.dmv_license_plate_number} /> */}
+                            <AddReview vehicleLicenseNumber={driver.dmv_license_plate_number} onReviewAdded={fetchDriverReviews} />
                         </div>
                     </div>
                 </div>

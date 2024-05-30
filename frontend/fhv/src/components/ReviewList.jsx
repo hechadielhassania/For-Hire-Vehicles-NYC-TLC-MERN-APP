@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { FaStar, FaEdit, FaTrash } from 'react-icons/fa';
 
 const ReviewList = ({ vehicleLicenseNumber }) => {
     const [reviews, setReviews] = useState([]);
@@ -104,19 +105,27 @@ const ReviewList = ({ vehicleLicenseNumber }) => {
                         <div>
                             <h3 className="text-lg font-semibold">{review.reviewer_name}</h3>
                             <p className="text-gray-700">{review.review_text}</p>
-                            <p className="text-gray-500">Rating: {review.rating}</p>
+                            <div className="flex items-center mb-2">
+                                <p className="text-gray-700 mr-2">Rating:</p>
+                                <div className="flex">
+                                    {[...Array(review.rating)].map((_, index) => (
+                                        <FaStar key={index} className="text-amber-500" />
+                                    ))}
+                                </div>
+                            </div>
+                            <p className="text-gray-500 text-sm">Reviewed on: {new Date(review.date).toLocaleDateString()}</p>
                             <div className="flex space-x-2 mt-2">
                                 <button
                                     onClick={() => startEditing(review)}
                                     className="inline-flex justify-center py-1 px-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                                 >
-                                    Edit
+                                    <FaEdit className="mr-1" /> Edit
                                 </button>
                                 <button
                                     onClick={() => deleteReview(review._id)}
                                     className="inline-flex justify-center py-1 px-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
                                 >
-                                    Delete
+                                    <FaTrash className="mr-1" /> Delete
                                 </button>
                             </div>
                         </div>
