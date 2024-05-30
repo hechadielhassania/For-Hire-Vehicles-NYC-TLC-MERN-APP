@@ -49,6 +49,12 @@ Our application collects and displays user reviews for NYC taxi drivers. By inte
 
 - **NYC Hire Vehicles API**: [NYC Open Data](https://data.cityofnewyork.us/resource/8wbx-tsch.json)
 
+## 📅 Gantt Chart
+
+| Snapshot                                              |
+| ----------------------------------------------------- |
+| ![Gantt Chart](assets/grant.png) |
+
 
 ## 📝 Takeaway
 
